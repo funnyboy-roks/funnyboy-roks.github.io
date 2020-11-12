@@ -1,0 +1,20 @@
+html{
+    background: #f4f4f4;
+}
+
+.cards{
+    width: 100%;
+    grid-auto-columns: 3;
+    /* column-width: 30%; */
+}
+
+.card{
+    margin: 1em;
+    width: 30%;
+    min-width: 400px;
+    cursor: pointer;
+}
+
+.underline{
+    text-decoration: underline;
+}
