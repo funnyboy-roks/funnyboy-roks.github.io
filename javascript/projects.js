@@ -18,7 +18,7 @@ class card {
 			  })
 			: '';
 		// prettier-ignore
-		return `<div class="card is-clickable" id="${this.json.name}" onclick="location.href = '${openProjectPage('/project', this.json.name)}'">
+		return `<div class="card is-clickable mb-4" id="${this.json.name}" onclick="location.href = '${openProjectPage('/project', this.json.name)}'">
             <div class="card-content">
                 <div class="media">
                     <div class="media-content">
@@ -32,7 +32,6 @@ class card {
                 </div>
             </div>
         </div>`;
-		//TODO: ADD Language somewhere
 	};
 }
 
@@ -54,21 +53,14 @@ function openProjectPage(path, projectName) {
 	return `http://${location.host}${path}#${projectName}`;
 }
 
-function formatDate(date) {
-	// prettier-ignore
-	let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-	return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
-}
-
-
-
 async function loadGHRepos() {
 	// let ghData = await fetch(
 	// 	'https://api.github.com/users/funnyboy-roks/repos',
 	// 	{ headers }
 	// );
-    // json = await ghData.json();
-    json = projectsJSON // Just one of the repos temp. so that I don't hit rate limit issues
+	// json = await ghData.json();
+	json = await fetchURL('https://api.github.com/users/funnyboy-roks/repos');
+	// json = projectsJSON; // Just one of the repos temp. so that I don't hit rate limit issues
 	console.log(json);
 
 	let outHTML = '';

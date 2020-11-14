@@ -17,28 +17,34 @@ const elems = {
 		stars: document.querySelector('#counts').querySelector('#star-count'),
 	},
 	description: document.querySelector('#description'),
+	dates: {
+		created: document.querySelector('#dates').querySelector('#created-at'),
+		updated: document.querySelector('#dates').querySelector('#updated-at'),
+		pushed: document.querySelector('#dates').querySelector('#pushed-at'),
+	},
 };
 
 let json;
+// let repoInfoJson; // Eventually read a file called `websiteInfo.json` in root dir if it exists
+/* Contains information like:
+- "production-url": "URL",
+- "pinned": true/false,
+- etc.
 
-async function fetchURL(url) {
-	let data = await fetch(url, { headers });
-	let json = await data.json();
-	return json;
-}
 
+*/
 async function getRepoInfo() {
 	if (location.hash.length <= 1) {
 		location.href = `http://${location.host}/projects/`;
 	}
 
-	// json = await fetchURL(
-	// 	'https://api.github.com/repos/funnyboy-roks/' + project
-	// );
-	json = projectJSON; // TEMP json so that I don't hit rate limiting
+	json = await fetchURL(
+		'https://api.github.com/repos/funnyboy-roks/' + project
+	);
+	// json = projectJSON; // TEMP json so that I don't hit rate limiting
 
 	elems.title.innerText = json.name + ' | funnyboy_roks';
-	elems.h1title.innerText = `${properCase(json.name.replace(/-/g, ' '))}`;
+	elems.h1title.innerText = `${properCase(json.name.replace(/[-_]/g, ' '))}`;
 	elems.subtitle.innerHTML =
 		generateLinkTag({
 			url: json.html_url,
@@ -57,7 +63,11 @@ async function getRepoInfo() {
 	elems.counts.forks.innerText = formatNumber(json.forks_count);
 	elems.counts.watchers.innerText = formatNumber(json.watchers_count);
 	elems.counts.stars.innerText = formatNumber(json.stargazers_count);
-	elems.description.innerText = json.description;
+	elems.dates.created.innerText = formatDate(new Date(json.created_at), year=false);
+	elems.dates.updated.innerText = formatDate(new Date(json.updated_at), year=false);
+	elems.dates.pushed.innerText = formatDate(new Date(json.pushed_at), year=false);
+
+	elems.description.innerText = json.description || 'No Description';
 }
 
 window.onload = getRepoInfo;

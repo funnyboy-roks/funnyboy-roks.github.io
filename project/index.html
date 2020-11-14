@@ -19,7 +19,7 @@
         </div>
     </section>
     <section class="container is-max-widescreen">
-        <nav class="level mt-6" id="counts">
+        <nav class="level mt-6" id="counts"> <!-- Counts of the various things (forks, watchers, stars)-->
             <div class="level-item has-text-centered">
                 <div>
                     <p class="heading">Forks</p>
@@ -39,12 +39,45 @@
                 </div>
             </div>
         </nav>
+
+        <!-- Will use in future- GH Info: <img src="https://github-readme-stats.vercel.app/api?username=funnyboy-roks&show_icons=true&theme=radical"> -->
+        <!-- Will use in future- Lang Info: <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=funnyboy-roks&hide=GLSL&layout=compact" alt="GitHub Stats"> -->
+
         <div class="has-text-centered">
             <div>
-                <p class="title is-uppercase has-text-weight-medium is-family-secondary is-5">Repository Description</p>
-                <p class="" id="description">Description</p>
+                <p class="title has-text-weight-medium is-family-secondary is-3 mb-0 mt-6 repo-info-title">Description</p>
+                <p class="title is-5 has-text-weight-normal" id="description">Description</p>
             </div>
+            <!-- <div>  TEMP FOR NOW, NOT SURE WHAT I WANT TO DO WITH THIS
+                <p class="title has-text-weight-medium is-family-secondary is-3 mb-0 mt-6 repo-info-title">Description</p>
+                <p class="title is-5 has-text-weight-normal" id="description">Description</p>
+            </div>
+            <div>
+                <p class="title has-text-weight-medium is-family-secondary is-3  mb-0 mt-6 repo-info-title">Description</p>
+                <p class="title is-5 has-text-weight-normal" id="description">Description</p>
+            </div> -->
         </div>
+
+        <nav class="level mt-6" id="dates"> <!--  The times tha the various things updated last (created, updated, pushed) -->
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Created At</p>
+                    <p class="title" id="created-at">0</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Updated At</p>
+                    <p class="title" id="updated-at">0</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Pushed At</p>
+                    <p class="title" id="pushed-at">0</p>
+                </div>
+            </div>
+        </nav>
     </section>
 
     <script src="../javascript/funcs.js"></script>

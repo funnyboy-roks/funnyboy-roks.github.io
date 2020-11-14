@@ -1,9 +1,10 @@
-
+html{
+    background: #f4f4f4;
+}
 
 .cards{
     width: 100%;
     columns: 3;
-    padding: 1em;
     /* column-width: 30%; */
 }
 /* 

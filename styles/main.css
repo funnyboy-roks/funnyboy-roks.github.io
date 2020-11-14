@@ -1,16 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Ubuntu&display=swap');
 
-html{
-    background: #f4f4f4;
+html {
+	background: #f4f4f4;
 }
 
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Ubuntu', sans-serif;
-    /* font-family: 'Abel', sans-serif; */
-}
-
-content{
-    font-family: 'Abel', sans-serif;
+.repo-info-title {
+	text-decoration: underline;
 }
