@@ -38,6 +38,8 @@ function formatDate(date, year = true) {
 }
 async function fetchURL(url, h=headers) {
 	let data = await fetch(url, { headers: h });
+	if(!data.ok){ return {}; }
 	let json = await data.json();
 	return json;
+	
 }
