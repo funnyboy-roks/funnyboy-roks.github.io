@@ -22,9 +22,13 @@ const elems = {
 		updated: document.querySelector('#dates').querySelector('#updated-at'),
 		pushed: document.querySelector('#dates').querySelector('#pushed-at'),
 	},
+	fromInfoJson: {
+		main: document.querySelector('#from-info-json-main'),
+	},
 };
 
 let json;
+let infoJson;
 // let repoInfoJson; // Eventually read a file called `websiteInfo.json` in root dir if it exists
 /* Contains information like:
 - "production-url": "URL",
@@ -42,6 +46,8 @@ async function getRepoInfo() {
 		'https://api.github.com/repos/funnyboy-roks/' + project
 	);
 	// json = projectJSON; // TEMP json so that I don't hit rate limiting
+
+	infoJson = await getInfoJson(json);
 
 	elems.title.innerText = json.name + ' | funnyboy_roks';
 	elems.h1title.innerText = `${properCase(json.name.replace(/[-_]/g, ' '))}`;
@@ -63,9 +69,19 @@ async function getRepoInfo() {
 	elems.counts.forks.innerText = formatNumber(json.forks_count);
 	elems.counts.watchers.innerText = formatNumber(json.watchers_count);
 	elems.counts.stars.innerText = formatNumber(json.stargazers_count);
-	elems.dates.created.innerText = formatDate(new Date(json.created_at), year=false);
-	elems.dates.updated.innerText = formatDate(new Date(json.updated_at), year=false);
-	elems.dates.pushed.innerText = formatDate(new Date(json.pushed_at), year=false);
+	elems.dates.created.innerText = formatDate(
+		new Date(json.created_at),
+		(year = false)
+	);
+	elems.dates.updated.innerText = formatDate(
+		new Date(json.updated_at),
+		(year = false)
+	);
+	elems.dates.pushed.innerText = formatDate(
+		new Date(json.pushed_at),
+		(year = false)
+	);
+	elems.fromInfoJson.main.innerText = JSON.stringify(infoJson);
 
 	elems.description.innerText = json.description || 'No Description';
 }
