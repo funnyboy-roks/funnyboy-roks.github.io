@@ -9,6 +9,7 @@ const elems = {
 	h1title: document.querySelector('h1.title'),
 	subtitle: document.querySelector('#subtitle'),
 	fork: document.querySelector('#fork'),
+	descMeta: document.querySelector('#desc-meta'),
 	counts: {
 		forks: document.querySelector('#counts').querySelector('#fork-count'),
 		watchers: document
@@ -103,6 +104,10 @@ async function getRepoInfo() {
 			elems.fromInfoJson.langs.innerText = infoJson.featured_langs.join(
 				', '
 			);
+		}
+
+		if(infoJson.name){
+			elems.h1title.innerHTML = infoJson.name;
 		}
 		
 		if(infoJson.links){

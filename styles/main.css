@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Ubuntu&display=swap');
-
 html {
-	background: #f4f4f4;
+	background: #3a3a3a;
 }
 
-.repo-info-title {
-	text-decoration: underline;
+.heading{
+	color: white;
 }
+
+.container .title, .repo-info-value{
+	color: #f4f4f4;
+}
+
