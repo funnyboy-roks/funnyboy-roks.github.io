@@ -18,3 +18,9 @@ html{
 .underline{
     text-decoration: underline;
 }
+
+@media (max-width: 700px){
+    .cards{
+        columns: 1;
+    }
+}
