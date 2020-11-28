@@ -1,6 +1,15 @@
 {
-	"production_url": "https://funnyboyroks.com",
 	"pinned": false,
-	"long_description": "This is a long description of this repositiory!  It gives so much more information that the short one!",
-	"featured_langs": ["JavaScript", "HTML", "CSS"]
+	"long_description": "My website!",
+	"featured_langs": ["JavaScript", "HTML", "CSS"],
+	"links": [
+		{
+			"label": "Production",
+			"url": "https://funnyboyroks.com"
+		},
+		{
+			"label": "Test1",
+			"url": "https://www.example.com"
+		}
+	]
 }

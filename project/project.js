@@ -23,7 +23,16 @@ const elems = {
 		pushed: document.querySelector('#dates').querySelector('#pushed-at'),
 	},
 	fromInfoJson: {
-		main: document.querySelector('#from-info-json-main'),
+		linksDiv: document.querySelector('#repo-links'),
+		langs: document.querySelector('#langs'),
+		longDesc: {
+			elem: document.querySelector('#repo-info #long-desc'),
+			val: document.querySelector('#repo-info #long-desc #value'),
+		},
+		prod: {
+			elem: document.querySelector('#repo-info #prod'),
+			val: document.querySelector('#repo-info #prod #value'),
+		},
 	},
 };
 
@@ -81,7 +90,36 @@ async function getRepoInfo() {
 		new Date(json.pushed_at),
 		(year = false)
 	);
-	elems.fromInfoJson.main.innerText = JSON.stringify(infoJson);
+
+	if (infoJson) {
+		if (infoJson.long_description) {
+			elems.fromInfoJson.longDesc.elem.style.display = '';
+			elems.fromInfoJson.longDesc.val.innerHTML =
+				infoJson.long_description;
+		}
+
+		if (infoJson.featured_langs) {
+			elems.fromInfoJson.langs.style.display = '';
+			elems.fromInfoJson.langs.innerText = infoJson.featured_langs.join(
+				', '
+			);
+		}
+		
+		if(infoJson.links){
+			for(let link of infoJson.links){
+				document.querySelector('#hero-foot').style.display = '';
+				elems.fromInfoJson.linksDiv.innerHTML += `
+					<li>
+						${generateLinkTag({url: link.url, label: link.label})}
+					</li>
+				`
+			}
+		}
+	}
+	if (elems.fromInfoJson.langs.style.display != '' && json.language) {
+		elems.fromInfoJson.langs.style.display = '';
+		elems.fromInfoJson.langs.innerHTML = json.language;
+	}
 
 	elems.description.innerText = json.description || 'No Description';
 }

@@ -17,6 +17,9 @@ class card {
 					class: ['underline'],
 			  })
 			: '';
+		let lang = "";
+		if(this.json.language){ lang = this.json.language + ' | '}
+
 		// prettier-ignore
 		return `<div class="card is-clickable mb-4" id="${this.json.name}" onclick="location.href = '${openProjectPage('/project', this.json.name)}'">
             <div class="card-content">
@@ -28,7 +31,7 @@ class card {
                 </div>
                 <div class="content">
                     ${this.json.description ? this.json.description + '<br>' : ''}
-                    ${this.json.language} | <time>${formatDate(new Date(this.json.created_at))}</time>
+                    ${lang}<time>${formatDate(new Date(this.json.created_at))}</time>
                 </div>
             </div>
         </div>`;

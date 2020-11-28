@@ -13,14 +13,67 @@
 
 <body>
     <section class="hero is-primary">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item subtitle" href="../">
+                            funnyboy_roks
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenuHeroA" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a class="navbar-item" href="../">
+                                Home
+                            </a>
+                            <a class="navbar-item" href="../about">
+                                About
+                            </a>
+                            </a>
+                            <a class="navbar-item" href="../projects/">
+                                Projects
+                            </a>
+                            <a class="navbar-item" href="../contact">
+                                Contact
+                            </a>
+                            <span class="navbar-item">
+                                <a class="button is-primary is-inverted" href="https://github.com/funnyboy-roks/">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>GitHub</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
         <div class="hero-body">
             <h1 class="title is-1">Loading...</h1>
             <h2 class="subtitle" id="subtitle">Please wait...</h2>
+            <h2 class="subtitle" id="langs" style="display: none;">Languages</h2>
         </div>
+        <div class="hero-foot" style="display: none;" id="hero-foot">
+            <nav class="tabs is-boxed is-fullwidth">
+              <div class="container">
+                <ul id="repo-links">
+                </ul>
+              </div>
+            </nav>
+          </div>
     </section>
+
+
+
     <section class="container is-max-widescreen">
-        <nav class="level mt-6" id="counts">
-            <!-- Counts of the various things (forks, watchers, stars)-->
+        <nav class="level mt-6" id="counts"> <!-- Counts of the various things (forks, watchers, stars)-->
             <div class="level-item has-text-centered">
                 <div>
                     <p class="heading">Forks</p>
@@ -41,42 +94,52 @@
             </div>
         </nav>
 
-        <!-- Will use in future- GH Info: <img src="https://github-readme-stats.vercel.app/api?username=funnyboy-roks&show_icons=true&theme=radical"> -->
-        <!-- Will use in future- Lang Info: <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=funnyboy-roks&hide=GLSL&layout=compact" alt="GitHub Stats"> -->
-
-        <div class="has-text-centered">
-            <div>
-                <p class="title has-text-weight-medium is-family-secondary is-3 mb-0 mt-6 repo-info-title">Description
-                </p>
-                <p class="title is-5 has-text-weight-normal" id="description">Description</p>
-            </div>
-        </div>
-
-        <nav class="level mt-6" id="dates">
-            <!--  The times tha the various things updated last (created, updated, pushed) -->
-            <p id="from-info-json-main"></p>
+        <nav class="level mt-6" id="dates"> <!--  The times that the various things updated last (created, updated, pushed) -->
             <div class="level-item has-text-centered">
                 <div>
-                    <p class="heading">Created At</p>
+                    <p class="heading">Created On</p>
                     <p class="title" id="created-at">0</p>
                 </div>
             </div>
             <div class="level-item has-text-centered">
                 <div>
-                    <p class="heading">Updated At</p>
+                    <p class="heading">Updated On</p>
                     <p class="title" id="updated-at">0</p>
                 </div>
             </div>
             <div class="level-item has-text-centered">
                 <div>
-                    <p class="heading">Pushed At</p>
+                    <p class="heading">Pushed On</p>
                     <p class="title" id="pushed-at">0</p>
                 </div>
             </div>
         </nav>
     </section>
+    <!-- Will use in future- GH Info: <img src="https://github-readme-stats.vercel.app/api?username=funnyboy-roks&show_icons=true&theme=radical"> -->
+    <!-- Will use in future- Lang Info: <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=funnyboy-roks&hide=GLSL&layout=compact" alt="GitHub Stats"> -->
 
-    <script src="../javascript/tempjson.js"></script>
+    <div class="has-text-centered" id="repo-info">
+        <div>
+            <p class="title has-text-weight-medium is-family-secondary is-3 mb-0 mt-6 repo-info-title">Description</p>
+            <p class="title is-5 has-text-weight-normal" id="description">Description</p>
+        </div>
+        <div id="long-desc" style="display: none;">
+            <p class="title has-text-weight-medium is-family-secondary is-3 mb-0 mt-6 repo-info-title">Long Description</p>
+            <p class="title is-5 has-text-weight-normal" id="value">Long Description</p>
+        </div>
+        <div id="prod" style="display: none;">
+            <p class="title has-text-weight-medium is-family-secondary is-3 mb-0 mt-6 repo-info-title">Production URL</p>
+            <p class="title is-5 has-text-weight-normal" id="value">Production URL</p>
+        </div>
+
+    </div>
+    
+
+
+
+
+
+
 
     <script src="../javascript/funcs.js"></script>
     <script src="./infoJson.js"></script>
