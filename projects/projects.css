@@ -1,0 +1,7 @@
+img.programming-lang {
+    width: 12rem;
+}
+
+img.programming-lang:hover {
+    width: 18rem;
+}
