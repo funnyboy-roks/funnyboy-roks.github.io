@@ -1,7 +1,47 @@
-img.programming-lang {
-    width: 12rem;
+html {
+	background: #818181;
 }
 
-img.programming-lang:hover {
-    width: 18rem;
+* {
+	color: black;
+}
+
+img.programming-lang {
+	max-height: 12rem;
+}
+
+.langs {
+	border-top: 3px solid #9f4;
+	border-bottom: 3px solid #9f4;
+	background: #c0ff8daa;
+	width: 100%;
+	text-align: center;
+}
+
+.langs ul {
+	padding: 2rem;
+	list-style: none;
+}
+
+.langs > ul > li {
+	padding: 0 6rem;
+	display: inline-block;
+}
+
+.carte-sample {
+	position: relative;
+}
+
+.carte-sample,
+.carte-sample * {
+	transition: all .25s;
+}
+
+.carte-sample:hover {
+	scale: 1.8;
+	z-index: 10;
+}
+
+.carte-sample:hover img {
+	filter: drop-shadow(0.5rem 0.5rem 0.5rem #000);
 }

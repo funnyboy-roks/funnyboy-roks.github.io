@@ -1,0 +1,48 @@
+
+
+.main-menu,
+.main-menu li {
+	font-size: 3rem;
+	color: #f9f9f9;
+	list-style: none;
+	text-align: center;
+}
+
+.main-menu {
+	padding: 8rem 0;
+}
+
+.main-menu h1 {
+	font-size: 5rem;
+	cursor: default;
+}
+
+.main-menu ul {
+	padding-top: 4rem;
+}
+
+.main-menu ul li {
+	margin: 0.5rem 0;
+}
+
+.main-menu li a {
+	color: #cecece;
+	text-decoration: none;
+	font-family: 'Be Vietnam Pro', sans-serif;
+	transition: all 0.25s;
+}
+
+.main-menu li a:hover {
+	color: #f9f9f9;
+	font-size: 4rem;
+	text-shadow: #fff 0px 0px 5px, #aaa 0px 0px 10px, #888 0px 0px 15px;
+}
+
+#main {
+	margin: 0px;
+	padding: 0px;
+	height: 100vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url('../img/background.jpg');
+	background-size: cover;
+}
