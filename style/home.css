@@ -1,8 +1,6 @@
-
-
 .main-menu,
 .main-menu li {
-	font-size: 3rem;
+	font-size: 5vmin;
 	color: #f9f9f9;
 	list-style: none;
 	text-align: center;
@@ -13,7 +11,7 @@
 }
 
 .main-menu h1 {
-	font-size: 5rem;
+	font-size: 13vmin;
 	cursor: default;
 }
 
@@ -34,7 +32,7 @@
 
 .main-menu li a:hover {
 	color: #f9f9f9;
-	font-size: 4rem;
+	font-size: 7vmin;
 	text-shadow: #fff 0px 0px 5px, #aaa 0px 0px 10px, #888 0px 0px 15px;
 }
 
@@ -42,7 +40,22 @@
 	margin: 0px;
 	padding: 0px;
 	height: 100vh;
+}
+
+body {
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 		url('../img/background.jpg');
+
 	background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+	.main-menu,
+	.main-menu li {
+		font-size: 10vmin;
+	}
+
+	.main-menu li a:hover {
+		font-size: 12vmin;
+	}
 }
