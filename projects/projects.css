@@ -1,47 +1,24 @@
-html {
-	background: #818181;
+body {
+	overflow-x: hidden;
 }
 
-* {
-	color: black;
+.programming-lang {
+	height: 16rem;
+	transition: all 0.3s ease;
 }
 
-img.programming-lang {
-	max-height: 12rem;
+.programming-lang:hover {
+	scale: 1.1;
+	filter: drop-shadow(0.5rem 0.5rem 0.5rem #0000008f);
 }
 
-.langs {
-	border-top: 3px solid #9f4;
-	border-bottom: 3px solid #9f4;
-	background: #c0ff8daa;
-	width: 100%;
-	text-align: center;
+.programming-langs {
+	width: 100vw;
+	padding: 2rem 0;
+	background: #a9ff62be;
 }
 
-.langs ul {
-	padding: 2rem;
-	list-style: none;
-}
-
-.langs > ul > li {
-	padding: 0 6rem;
-	display: inline-block;
-}
-
-.carte-sample {
-	position: relative;
-}
-
-.carte-sample,
-.carte-sample * {
-	transition: all .25s;
-}
-
-.carte-sample:hover {
-	scale: 1.8;
-	z-index: 10;
-}
-
-.carte-sample:hover img {
-	filter: drop-shadow(0.5rem 0.5rem 0.5rem #000);
+.card {
+	max-width: 20rem;
+	margin: 2rem;
 }

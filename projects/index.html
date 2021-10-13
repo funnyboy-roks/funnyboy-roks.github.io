@@ -5,51 +5,165 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../style/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.2/dist/superhero/bootstrap.min.css">
 	<link rel="stylesheet" href="./projects.css">
 	<title>Projects | funnyboy_roks</title>
 </head>
 
 <body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img src="https://bulma.io/images/placeholders/48x48.png" alt="🏠">
+			</a>
 
-	<header>
-		<a class="home" href="/">
-			<img class="home" title="Home" src="https://bulma.io/images/placeholders/128x128.png" alt="🏠">
-		</a>
-		<h1>Projects</h1>
-	</header>
+			<div class="collapse navbar-collapse" id="navbarColor01">
+				<ul class="navbar-nav me-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home
+							<span class="visually-hidden">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/about/">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="/projects/">Projects</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/contact/">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-	<a class="content">
-		<section class="langs">
-			<ul>
-				<li>
-					<a href="#javascript">
-						<div class="carte-sample">
-							<img class="programming-lang" src="../img/javascript.jpg" alt="JavaScript">
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="#java">
-						<div class="carte-sample">
-							<img class="programming-lang" src="../img/java.png" alt="Java">
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="#python">
-						<div class="carte-sample">
-							<img class="programming-lang" src="../img/python.png" alt="Python">
-						</div>
-					</a>
-				</li>
-			</ul>
-		</section>
-		Hi
-		<div style="height:200vh">
+	<h1 class="w-100 text-center py-5">Projects</h1>
+
+	<div id="langs" class="programming-langs">
+		<div class="row align-items-start">
+			<div class="col text-center">
+				<a href="#javascript">
+					<img class="programming-lang" src="../img/javascript.jpg" alt="JavaScript">
+				</a>
+			</div>
+			<div class="col text-center">
+				<a href="#typescript">
+					<img class="programming-lang" src="../img/typescript.jpg" alt="TypeScript">
+				</a>
+			</div>
+			<div class="col text-center">
+				<a href="#java">
+					<img class="programming-lang" src="../img/java.png" alt="Java">
+				</a>
+			</div>
+			<div class="col text-center">
+				<a href="#python">
+					<img class="programming-lang" src="../img/python.png" alt="Python">
+				</a>
+			</div>
 
 		</div>
+	</div>
+
+	<a id="javascript"></a>
+	<div style="min-height:100vh" class="container">
+		<h1 class="py-5 px-5">JavaScript Projects</h1>
+
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">Random JavaScript Projects</h4>
+				<h6 class="card-subtitle mb-2 text-muted">Status: <span class="badge rounded-pill bg-info">Ever
+						Expanding</span></h6>
+				<p class="card-text">A collection of random JavaScript projects that I've worked on</p>
+				<a href="https://github.com/funnyboy-roks/Random-JavaScript-Projects" class="card-link">GitHub</a>
+				<!-- <a href="#" class="card-link">Another link</a> -->
+			</div>
 		</div>
+
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">Minesweeper</h4>
+				<h6 class="card-subtitle mb-2 text-muted">Status: <span
+						class="badge rounded-pill bg-success">Complete</span></h6>
+				<p class="card-text">A minesweeper game made in JavaScript with p5.js</p>
+				<a href="https://github.com/funnyboy-roks/minesweeper" class="card-link">GitHub</a>
+				<a href="https://funnyboyroks.com/minesweeper" class="card-link">Live Game</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">ToDo Discord Bot - v2</h4>
+				<h6 class="card-subtitle mb-2 text-muted">Status: <span
+						class="badge rounded-pill bg-success">Complete</span></h6>
+				<p class="card-text">A Discord bot for creating and managing ToDo lists</p>
+				<a href="https://github.com/funnyboy-roks/To-Do-Bot-v2" class="card-link">GitHub</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">MC Gradient Generator</h4>
+				<h6 class="card-subtitle mb-2 text-muted">Status: <span
+						class="badge rounded-pill bg-success">Complete</span></h6>
+				<p class="card-text">A website for creating gradients for use in Minecraft</p>
+				<a href="https://github.com/funnyboy-roks/MC-Hexadecimal" class="card-link">GitHub</a>
+				<a href="https://funnyboyroks.com/MC-Hexadecimal" class="card-link">Live Site</a>
+			</div>
+		</div>
+
+	</div>
+	<hr>
+
+	<a id="typescript"></a>
+	<div style="min-height:100vh" class="container">
+		<h1 class="py-5 px-5">TypeScript Projects</h1>
+
+
+
+	</div>
+	<hr>
+
+	<a id="java"></a>
+	<div style="min-height:100vh" class="container">
+		<h1 class="py-5 px-5">Java Projects</h1>
+
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">Discord Link</h4>
+				<h6 class="card-subtitle mb-2 text-muted">Status: <span class="badge rounded-pill bg-warning">Work in
+						Progress</span></h6>
+				<p class="card-text">A plugin for PaperMC that connects Discord to a server</p>
+				<a href="https://github.com/funnyboy-roks/Discord-Link" class="card-link">GitHub</a>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">School</h4>
+				<h6 class="card-subtitle mb-2 text-muted">Status: <span class="badge rounded-pill bg-info">Ever Expanding</span></h6>
+				<p class="card-text">A collection of Java assignments and labs that I complete for school</p>
+				<a href="https://github.com/funnyboy-roks/school" class="card-link">GitHub</a>
+			</div>
+		</div>
+
+
+
+	</div>
+	<hr>
+
+	<a id="python"></a>
+	<div style="min-height:100vh" class="container">
+		<h1 class="py-5 px-5">Python Projects</h1>
+
+
+
+	</div>
+	<hr>
+
+	</div>
+	</div>
 </body>
 
 </html>
